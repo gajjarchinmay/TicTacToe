@@ -9,7 +9,7 @@
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
     android:paddingTop="10dp"
-    tools:context="com.tictactoe.tictactoe.MainActivity">
+    tools:context="com.tictactoeboardgame.game.MainActivity">
 
 
     <LinearLayout

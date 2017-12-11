@@ -1,4 +1,4 @@
-package com.tictactoe.tictactoe;
+package com.tictactoeboardgame.game;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -15,7 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.firebase.crash.FirebaseCrash;
 

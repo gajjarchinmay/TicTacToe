@@ -1,4 +1,4 @@
-package com.tictactoe.tictactoe
+package com.tictactoeboardgame.game
 
 import org.junit.Test
 
