@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "668763091254",
+    "firebase_url": "https://tic-tac-toe-boardgame.firebaseio.com",
+    "project_id": "tic-tac-toe-boardgame",
+    "storage_bucket": "tic-tac-toe-boardgame.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668763091254:android:cdc96c0e67a0294d",
+        "android_client_info": {
+          "package_name": "com.tictactoeboardgame.game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "668763091254-6h7mh5v11q4r0tt4duc86dqialuvfrdm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tictactoeboardgame.game",
+            "certificate_hash": "e105c7fab5e72f7b38848ba948ca9fc51cbe9337"
+          }
+        },
+        {
+          "client_id": "668763091254-kqkohn7glop7qbif725j190efi2diip5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCERiMffvSxDT8mgOcwJpTNQybeCTiL9Ng"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "668763091254-kqkohn7glop7qbif725j190efi2diip5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
