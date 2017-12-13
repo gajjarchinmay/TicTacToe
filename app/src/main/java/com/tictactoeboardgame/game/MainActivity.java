@@ -20,6 +20,7 @@ import com.google.firebase.crash.FirebaseCrash;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Added lines to check auto builds via jenkins
     private AdView mAdView;
 
     private static final int REQUEST_PERMISSION_INTERNET = 1;
