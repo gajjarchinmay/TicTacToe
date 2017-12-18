@@ -19,8 +19,8 @@ android {
         applicationId "com.tictactoeboardgame.game"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 2
-        versionName "1.1"
+        versionCode 3
+        versionName "2.1"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config

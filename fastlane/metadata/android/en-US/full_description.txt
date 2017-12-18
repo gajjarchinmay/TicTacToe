@@ -1,0 +1,1 @@
+This is an android game application namely Tic Tac Toe. But here the game is slightly different from the original cross and noughts as here those are heart and spades. Enjoy the game!!!
