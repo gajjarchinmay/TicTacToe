@@ -13,9 +13,14 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.google.firebase.crash.FirebaseCrash;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
     //0 = heart, 1= spade
     int activePlayer = 0;
     boolean gameIsActive = true;
+
+    //Admob Banner
+    private int count=0;
+    private RewardedVideoAd mRewardedVideoAd;
 
     // 2 means unplayed
     int[] gameState = {2, 2, 2, 2, 2, 2, 2, 2, 2};
@@ -115,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resetGame(View view) {
+
+        count++;
         gameIsActive = true;
 
         LinearLayout layout = (LinearLayout) findViewById(R.id.playAgainLayout);
@@ -135,6 +146,23 @@ public class MainActivity extends AppCompatActivity {
 
             ((ImageView) gridLayout.getChildAt(i)).setImageResource(0);
             ((ImageView) gridLayout.getChildAt(i)).animate().rotation(0).setDuration(10);
+        }
+
+        if(!mRewardedVideoAd.isLoaded()){
+            mRewardedVideoAd.loadAd(getString(R.string.ad_unit_id), new AdRequest.Builder().build());
+        }
+
+        if(count == 2){
+            count = 0;
+            showRewardedVideo();
+        }
+
+    }
+
+    public void showRewardedVideo() {
+        if (mRewardedVideoAd.isLoaded()) {
+            mRewardedVideoAd.show();
+
         }
     }
 
@@ -162,6 +190,58 @@ public class MainActivity extends AppCompatActivity {
         mAdView.loadAd(adRequest);*/
 
         Log.d("Device ID", "Device Id : " + Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID));
+
+        MobileAds.initialize(getApplicationContext(),
+                getString(R.string.admob_app_id));
+
+        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+
+        mRewardedVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
+            @Override
+            public void onRewardedVideoAdLoaded() {
+                Toast.makeText(getBaseContext(),
+                        "Ad loaded.", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onRewardedVideoAdOpened() {
+                Toast.makeText(getBaseContext(),
+                        "Ad opened.", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onRewardedVideoStarted() {
+                Toast.makeText(getBaseContext(),
+                        "Ad started.", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onRewardedVideoAdClosed() {
+                Toast.makeText(getBaseContext(),
+                        "Ad closed.", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onRewarded(RewardItem rewardItem) {
+                Toast.makeText(getBaseContext(),
+                        "Ad triggered reward.", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onRewardedVideoAdLeftApplication() {
+                Toast.makeText(getBaseContext(),
+                        "Ad left application.", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onRewardedVideoAdFailedToLoad(int i) {
+                Toast.makeText(getBaseContext(),
+                        "Ad failed to load.", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+        mRewardedVideoAd.loadAd(getString(R.string.ad_unit_id), new AdRequest.Builder().build());
 
     }
 

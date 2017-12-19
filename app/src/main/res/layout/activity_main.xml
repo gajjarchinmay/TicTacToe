@@ -180,4 +180,6 @@
         ads:adSize="BANNER"
         ads:adUnitId="@string/ad_banner_footer" />
 
+
+
 </RelativeLayout>
