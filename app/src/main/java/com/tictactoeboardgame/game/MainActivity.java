@@ -13,7 +13,6 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.ads.AdRequest;
@@ -206,44 +205,37 @@ public class MainActivity extends AppCompatActivity {
         mRewardedVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
             @Override
             public void onRewardedVideoAdLoaded() {
-                Toast.makeText(getBaseContext(),
-                        "Ad loaded.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getBaseContext(),"Ad loaded.", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRewardedVideoAdOpened() {
-                Toast.makeText(getBaseContext(),
-                        "Ad opened.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getBaseContext(),"Ad opened.", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRewardedVideoStarted() {
-                Toast.makeText(getBaseContext(),
-                        "Ad started.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getBaseContext(),"Ad started.", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRewardedVideoAdClosed() {
-                Toast.makeText(getBaseContext(),
-                        "Ad closed.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getBaseContext(),"Ad closed.", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRewarded(RewardItem rewardItem) {
-                Toast.makeText(getBaseContext(),
-                        "Ad triggered reward.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getBaseContext(),"Ad triggered reward.", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRewardedVideoAdLeftApplication() {
-                Toast.makeText(getBaseContext(),
-                        "Ad left application.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getBaseContext(),"Ad left application.", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRewardedVideoAdFailedToLoad(int i) {
-                Toast.makeText(getBaseContext(),
-                        "Ad failed to load.", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getBaseContext(),"Ad failed to load.", Toast.LENGTH_SHORT).show();
             }
 
         });
