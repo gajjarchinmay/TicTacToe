@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "668763091254-j9pm78retpilql7etv3kn96bd9s6ro5u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tictactoeboardgame.game",
+            "certificate_hash": "79a0c58615822b926ba8d8c17da85a0bcbcb283d"
+          }
+        },
+        {
           "client_id": "668763091254-6h7mh5v11q4r0tt4duc86dqialuvfrdm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

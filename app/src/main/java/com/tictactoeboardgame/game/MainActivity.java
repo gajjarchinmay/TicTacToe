@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -22,6 +23,8 @@ import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.google.firebase.crash.FirebaseCrash;
+
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     boolean gameIsActive = true;
 
     //Admob Banner
-    private int count=0;
+    private int count = 0;
     private RewardedVideoAd mRewardedVideoAd;
 
     // 2 means unplayed
@@ -148,11 +151,11 @@ public class MainActivity extends AppCompatActivity {
             ((ImageView) gridLayout.getChildAt(i)).animate().rotation(0).setDuration(10);
         }
 
-        if(!mRewardedVideoAd.isLoaded()){
+        if (!mRewardedVideoAd.isLoaded()) {
             mRewardedVideoAd.loadAd(getString(R.string.ad_unit_id), new AdRequest.Builder().build());
         }
 
-        if(count == 2){
+        if (count == 2) {
             count = 0;
             showRewardedVideo();
         }
@@ -169,6 +172,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Initializing the fabric kit
+        Fabric.with(this, new Crashlytics());
+
         setContentView(R.layout.activity_main);
 
         FirebaseCrash.log("Activity created");
