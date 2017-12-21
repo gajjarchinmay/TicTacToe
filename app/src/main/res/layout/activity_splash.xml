@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.tictactoeboardgame.game.SplashActivity">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:src="@drawable/title" />
+
+    <ImageView
+        android:id="@+id/ivSplashLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="3"
+        android:src="@drawable/splash_brown" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/version_number"
+        android:textColor="@color/cream"
+        android:textSize="20sp" />
+
+</LinearLayout>

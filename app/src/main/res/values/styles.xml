@@ -3,9 +3,15 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/dark_brown_2</item>
+        <item name="colorPrimaryDark">@color/dark_brown_1</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="button_blocks">
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_width">90dp</item>
+        <item name="android:padding">15dp</item>
     </style>
 
 </resources>

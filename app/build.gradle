@@ -25,7 +25,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 3
-        versionName "2.1"
+        versionName "2.2"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
@@ -38,7 +38,7 @@ android {
             zipAlignEnabled true
         }
     }
-    lintOptions{
+    lintOptions {
         abortOnError false
     }
     buildToolsVersion '27.0.0'

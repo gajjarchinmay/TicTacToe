@@ -8,9 +8,6 @@
     <meta-data
         android:name="com.google.android.gms.version"
         android:value="@integer/google_play_services_version" />
-    <meta-data
-        android:name="io.fabric.ApiKey"
-        android:value="83de0f725b2e012554cbf82fe48afe9b298df8fb" />
 
     <application
         android:allowBackup="true"
@@ -19,24 +16,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.tictactoeboardgame.game.MainActivityKT">
+        <activity android:name=".MainActivityKT">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.tictactoeboardgame.game.MainActivity">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="83de0f725b2e012554cbf82fe48afe9b298df8fb" />
+
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--&lt;!&ndash;Include the AdActivity configChanges and theme. &ndash;&gt;
-        <activity
-            android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent" />-->
-
     </application>
 
 </manifest>
